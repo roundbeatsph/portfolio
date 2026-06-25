@@ -1,0 +1,6 @@
+# Allow all search engines to index everything
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap (edit to your real domain)
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

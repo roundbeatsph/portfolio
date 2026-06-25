@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Filipino Appliance Repair — Web App Build | Dennis Rosales</title>
+<meta name="description" content="Case study: the booking web app I built and maintain for Filipino Appliance Repair — calendar fixes, notifications, security hardening, PWA, live in production." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://YOUR-DOMAIN.com/fair.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#0B1711;--ink-2:#10201A;--emerald:#34B488;--emerald-deep:#1F6F54;--brass:#D4AC5A;
+    --paper:#F5F2EA;--paper-2:#EDE8DA;--charcoal:#1A1A17;--charcoal-soft:#4A4A42;--line:#D9D2C2;--line-dark:#243029;--max:920px;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--charcoal);font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  ::selection{background:var(--emerald);color:#04120B;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.04;letter-spacing:-0.02em;}
+  .mono{font-family:"IBM Plex Mono",monospace;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);}
+
+  .topbar{background:var(--ink);border-bottom:1px solid var(--line-dark);}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .back{font-family:"IBM Plex Mono";font-size:12.5px;letter-spacing:.03em;color:#B9C6BD;text-decoration:none;display:inline-flex;gap:8px;align-items:center;transition:gap .2s,color .2s;}
+  .back:hover{color:var(--paper);gap:12px;}
+  .topbar .mark{font-family:"Bricolage Grotesque";font-weight:800;color:var(--paper);font-size:17px;}
+  .topbar .mark span{color:var(--brass);}
+
+  .hero{background:radial-gradient(110% 90% at 90% -10%, rgba(52,180,136,.14), transparent 55%),var(--ink);color:var(--paper);padding:74px 0 60px;border-bottom:1px solid var(--line-dark);}
+  .hero .eyebrow{color:var(--brass);}
+  .hero h1{font-size:clamp(34px,6vw,62px);margin:14px 0 20px;max-width:18ch;}
+  .hero p{font-size:clamp(18px,2.2vw,21px);color:#D6E0D8;max-width:60ch;margin:0 0 28px;}
+  .hero .btnrow{display:flex;flex-wrap:wrap;gap:13px;align-items:center;}
+  .btn{font-family:"IBM Plex Mono";font-size:13px;letter-spacing:.03em;text-decoration:none;padding:12px 20px;border-radius:2px;display:inline-block;transition:transform .15s,background .15s,border-color .15s;}
+  .btn-primary{background:var(--emerald);color:#04120B;font-weight:500;}
+  .btn-primary:hover{background:#46cb9c;transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--line-dark);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--emerald);transform:translateY(-2px);}
+  .tags{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;}
+  .tags span{font-family:"IBM Plex Mono";font-size:11.5px;color:#A9B8AD;border:1px solid var(--line-dark);border-radius:2px;padding:4px 9px;}
+
+  .meta-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line);}
+  .meta-strip .c{background:var(--paper);padding:22px 24px;}
+  .meta-strip .k{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--emerald-deep);}
+  .meta-strip .v{font-family:"Bricolage Grotesque";font-weight:600;font-size:17px;margin-top:7px;letter-spacing:-0.01em;}
+  @media(max-width:680px){.meta-strip{grid-template-columns:1fr;}}
+
+  section{padding:54px 0;}
+  .lead{font-size:20px;color:var(--charcoal-soft);max-width:64ch;}
+  h2.block{font-size:clamp(24px,3.4vw,32px);margin:0 0 8px;}
+  .sub{color:var(--charcoal-soft);margin:0 0 26px;font-size:17px;}
+
+  .build{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .build .item{background:var(--paper);padding:26px 24px;}
+  .build .item h3{font-size:18px;margin:0 0 4px;}
+  .build .item .role{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald-deep);}
+  .build .item p{font-size:15.5px;color:var(--charcoal-soft);margin:12px 0 0;line-height:1.5;}
+  @media(max-width:680px){.build{grid-template-columns:1fr;}}
+
+  .qa{background:var(--ink);color:var(--paper);}
+  .qa h2.block{color:var(--paper);}
+  .qa .sub{color:#9FB3A6;}
+  .checks{list-style:none;padding:0;margin:0;}
+  .checks li{padding:14px 0 14px 34px;border-top:1px solid var(--line-dark);position:relative;color:#CBD6CD;font-size:16.5px;}
+  .checks li:first-child{border-top:none;}
+  .checks li::before{content:"✓";position:absolute;left:0;top:13px;color:var(--emerald);font-family:"IBM Plex Mono";font-weight:500;}
+
+  .nextcta{text-align:center;padding:70px 0;background:var(--ink-2);color:var(--paper);}
+  .nextcta h2{font-size:clamp(26px,4vw,40px);color:var(--paper);margin:0 0 22px;}
+  footer{background:var(--ink);color:#6F8276;text-align:center;padding:26px 0;font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.04em;border-top:1px solid var(--line-dark);}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}.btn:hover{transform:none;}}
+  a:focus-visible{outline:2px solid var(--emerald);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap row">
+    <a class="back" href="index.html">← Back to portfolio</a>
+    <div class="mark">DENNIS<span>.</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Case study · Web app</span>
+    <h1>Filipino Appliance Repair</h1>
+    <p>A booking web app for a family appliance-repair business in the GTA, built on Base44 (a low-code platform). I configured and customized the app, fixed its logic, wired the booking and notification flows, and hardened it for production — then kept it running while the family handles the repairs.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="https://filipinoappliancerepair.ca" target="_blank" rel="noopener">Visit the live site →</a>
+      <a class="btn btn-ghost" href="index.html">All projects</a>
+    </div>
+    <div class="tags">
+      <span>Base44</span><span>Booking system</span><span>PWA</span><span>Email notifications</span><span>Security</span><span>DNS</span>
+    </div>
+  </div>
+</header>
+
+<div class="meta-strip">
+  <div class="c"><div class="k">My role</div><div class="v">Builder, developer &amp; maintainer</div></div>
+  <div class="c"><div class="k">Status</div><div class="v">Live in production</div></div>
+  <div class="c"><div class="k">Tested</div><div class="v">End-to-end, all passing</div></div>
+</div>
+
+<section>
+  <div class="wrap reveal">
+    <p class="lead">Below is what's actually inside — the work that turned a basic site into a working booking tool a real business runs on. Every piece was tested end-to-end before going live.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="block reveal">What I built inside</h2>
+    <p class="sub reveal">Click into the live site to see the front end — here's what I configured, fixed and built behind it.</p>
+    <div class="build reveal">
+      <div class="item">
+        <span class="role">Booking system</span>
+        <h3>Calendar &amp; scheduling</h3>
+        <p>Fixed a booking-display bug so the calendar shows every booking for a date instead of only the first one, and ran bulk status clean-up on stale pending requests so the schedule reflects reality.</p>
+      </div>
+      <div class="item">
+        <span class="role">Notifications</span>
+        <h3>Customer &amp; technician emails</h3>
+        <p>Wired the notification flow end-to-end — customers get booking confirmations and the assigned technician is alerted automatically, so nothing falls through the cracks.</p>
+      </div>
+      <div class="item">
+        <span class="role">Security</span>
+        <h3>Hardening &amp; access control</h3>
+        <p>Locked the app down: row-level security, request rate limiting, authentication guards on protected routes, and secrets moved into environment variables instead of sitting in code.</p>
+      </div>
+      <div class="item">
+        <span class="role">Reliability</span>
+        <h3>PWA &amp; offline behaviour</h3>
+        <p>Rewrote the service worker to a network-first strategy, so the app loads fresh content reliably and still behaves like an installable progressive web app.</p>
+      </div>
+      <div class="item">
+        <span class="role">Content &amp; UX</span>
+        <h3>Services gallery</h3>
+        <p>Restructured the gallery into clear "Our Services" and "Recent Work" sections so visitors immediately understand what's offered and see proof of past jobs.</p>
+      </div>
+      <div class="item">
+        <span class="role">Setup</span>
+        <h3>Domain &amp; team</h3>
+        <p>Configured the custom domain and DNS, and set up the technician account so the right person receives and works the incoming jobs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="qa">
+  <div class="wrap">
+    <h2 class="block reveal">Tested before it shipped</h2>
+    <p class="sub reveal">I don't push to production on hope. Each flow was checked end-to-end, and everything passed before it went live.</p>
+    <ul class="checks reveal">
+      <li>Booking creation, display and status updates verified across dates</li>
+      <li>Customer confirmation and technician alert emails confirmed sending</li>
+      <li>Access guards and rate limiting tested against protected routes</li>
+      <li>PWA install and fresh-content loading verified on mobile</li>
+      <li>Live on the custom domain, in daily use by the business</li>
+    </ul>
+  </div>
+</section>
+
+<div class="nextcta">
+  <div class="wrap">
+    <h2>See the rest of the work →</h2>
+    <a class="btn btn-primary" href="index.html">Back to portfolio</a>
+  </div>
+</div>
+
+<footer>© <span id="yr"></span> Dennis Rosales · Toronto, ON</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>

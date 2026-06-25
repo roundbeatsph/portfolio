@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dennis Rosales — Growth Marketing &amp; AI Content Specialist | Toronto</title>
+<meta name="description" content="Toronto-based growth operator who runs paid media (Meta Ads), produces AI video and music content, and builds the web that converts. One hire, three disciplines." />
+<meta name="author" content="Dennis" />
+<meta name="robots" content="index, follow" />
+
+<!-- SEO: set this to your real deployed URL once live -->
+<link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+<meta name="theme-color" content="#0B1711" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1711'/%3E%3Ctext x='14' y='46' font-family='Arial,sans-serif' font-weight='800' font-size='40' fill='%23F5F2EA'%3ED%3C/text%3E%3Ccircle cx='50' cy='42' r='5' fill='%23D4AC5A'/%3E%3C/svg%3E" />
+
+<!-- Open Graph (Facebook / LinkedIn preview) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dennis — Portfolio" />
+<meta property="og:title" content="Dennis Rosales — Growth Marketing & AI Content Specialist | Toronto" />
+<meta property="og:description" content="Growth marketing that connects paid media, AI-assisted creative, and the landing pages and tracking behind them. Toronto, ON." />
+<meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+<meta property="og:image" content="https://YOUR-DOMAIN.com/preview.jpg" />
+<meta property="og:image:alt" content="Dennis — growth marketer and AI content producer, Toronto" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dennis Rosales — Growth Marketing & AI Content Specialist | Toronto" />
+<meta name="twitter:description" content="Paid media, AI content, and web development in one hire. Toronto, ON." />
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/preview.jpg" />
+
+<!-- Structured data: tells Google exactly who you are -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dennis Rosales",
+  "jobTitle": "Growth Marketing & AI Content Specialist",
+  "url": "https://YOUR-DOMAIN.com/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+  "knowsAbout": ["Performance Marketing", "Meta Ads", "Paid Social", "AI Video Production", "Content Strategy", "Web Development", "Three.js", "SEO"],
+  "alumniOf": "Polytechnic University of the Philippines",
+  "sameAs": [
+    "https://www.linkedin.com/in/dennis-rosales-b72a26239",
+    "https://www.youtube.com/@MoodtoMusik",
+    "https://www.tiktok.com/@moodtomusik",
+    "https://www.instagram.com/moodtomusik/"
+  ]
+}
+</script>
+
+<!-- =====================================================================
+     EDIT ME, DENNIS (remaining before publishing):
+       1. LinkedIn   -> search:  https://www.linkedin.com/in/dennis-rosales-b72a26239   (hero button, contact button, schema)
+       2. Domain     -> search:  YOUR-DOMAIN.com (here + fair.html, moodtomusik-ads.html, robots.txt, sitemap.xml)
+       3. Resume PDF -> add file: Dennis-Rosales-Resume.pdf  in this folder
+       4. CONFIRM education + work history are accurate before going live
+     (Done: full name, email, preview.jpg, AI-assisted wording, honest stats.)
+     ===================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#0B1711;
+    --ink-2:#10201A;
+    --emerald:#34B488;
+    --emerald-deep:#1F6F54;
+    --brass:#D4AC5A;
+    --paper:#F5F2EA;
+    --paper-2:#EDE8DA;
+    --charcoal:#1A1A17;
+    --charcoal-soft:#4A4A42;
+    --line:#D9D2C2;
+    --line-dark:#243029;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--charcoal);
+    font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  ::selection{background:var(--emerald);color:#04120B;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+
+  h1,h2,h3,.display{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-0.02em;}
+  .mono{font-family:"IBM Plex Mono",monospace;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--emerald-deep);}
+
+  /* ---------------- nav ---------------- */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:60;
+    background:rgba(11,23,17,0);backdrop-filter:blur(0px);
+    border-bottom:1px solid transparent;transition:background .35s ease,backdrop-filter .35s ease,border-color .35s ease;}
+  .nav.solid{background:rgba(11,23,17,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px;}
+  .nav .mark{font-family:"Bricolage Grotesque";font-weight:800;color:var(--paper);font-size:18px;letter-spacing:-0.02em;}
+  .nav .mark span{color:var(--brass);}
+  .nav-links{display:flex;gap:26px;}
+  .nav-links a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.04em;color:#B9C6BD;text-decoration:none;padding:6px 0;transition:color .2s;}
+  .nav-links a:hover{color:var(--paper);}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .nav-resume{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--paper);
+    text-decoration:none;border:1px solid var(--line-dark);border-radius:2px;padding:7px 14px;transition:border-color .2s,background .2s;}
+  .nav-resume:hover{border-color:var(--emerald);background:rgba(52,180,136,.08);}
+  .cta-link{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.03em;color:var(--emerald);text-decoration:underline;text-underline-offset:4px;align-self:center;transition:color .2s;}
+  .cta-link:hover{color:#46cb9c;}
+  .btn-resume{border:1px solid var(--brass);color:var(--paper);display:inline-flex;align-items:center;gap:9px;}
+  .btn-resume:hover{background:rgba(212,172,90,.12);border-color:var(--brass);transform:translateY(-2px);}
+  .btn-primary{display:inline-flex;align-items:center;gap:9px;}
+  .btn svg{width:15px;height:15px;}
+  .proof{display:flex;flex-wrap:wrap;align-items:center;row-gap:16px;margin:32px 0 0;opacity:0;animation:rise .8s .84s ease forwards;}
+  .pstat{display:flex;align-items:center;gap:13px;padding:0 26px;border-left:1px solid var(--line-dark);}
+  .pstat:first-child{padding-left:0;border-left:none;}
+  .pic{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(52,180,136,.4);display:flex;align-items:center;justify-content:center;color:var(--emerald);}
+  .pic svg{width:21px;height:21px;}
+  .pn{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;color:var(--paper);line-height:1;letter-spacing:-0.01em;}
+  .pl{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#9FB3A6;margin-top:5px;letter-spacing:.02em;}
+  @media(max-width:680px){
+    .nav-links{display:none;}
+    .hero{min-height:auto;}
+    .hero-content{padding:105px 0 58px;}
+    .loc{margin-bottom:18px;font-size:11px;}
+    .hero h1{font-size:clamp(43px,12vw,56px);line-height:0.98;margin-bottom:14px;max-width:12ch;}
+    .htag{font-size:clamp(24px,7vw,34px);margin-bottom:20px;max-width:18ch;}
+    .lede{font-size:18px;line-height:1.48;max-width:33ch;margin-bottom:24px;}
+    .cta-row{gap:10px;flex-wrap:wrap;}
+    .btn{padding:12px 16px;font-size:12px;}
+    .cta-link{font-size:12px;}
+    .proof{margin-top:24px;row-gap:18px;}
+    .pstat{padding:0 16px;}
+    .pn{font-size:22px;}
+    .pic{width:38px;height:38px;}
+    .pic svg{width:18px;height:18px;}
+    .scroll-hint{display:none;}
+  }
+
+  /* ---------------- hero ---------------- */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;
+    background:var(--ink);color:var(--paper);overflow:hidden;border-bottom:1px solid var(--line-dark);}
+  #gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;}
+  .hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(120% 100% at 18% 50%, rgba(11,23,17,.92) 0%, rgba(11,23,17,.62) 38%, rgba(11,23,17,.12) 70%, transparent 100%);}
+  .hero-content{position:relative;z-index:3;padding:120px 0 70px;width:100%;}
+  .loc{color:#9FB3A6;margin-bottom:26px;display:flex;align-items:center;flex-wrap:wrap;gap:0;font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;opacity:0;animation:rise .7s .15s ease forwards;}
+  .loc .b{color:var(--brass);}
+  .loc i{font-style:normal;color:#46584d;margin:0 12px;}
+  .hero h1.hname{font-size:clamp(46px,8vw,92px);margin:0 0 16px;max-width:none;color:var(--paper);
+    opacity:0;animation:rise .8s .22s ease forwards;}
+  .htag{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em;line-height:1.05;
+    font-size:clamp(27px,4.4vw,48px);color:var(--paper);margin:0 0 24px;max-width:20ch;
+    opacity:0;animation:rise .8s .36s ease forwards;}
+  .htag .hl{color:var(--brass);}
+  .htag .em{color:var(--emerald);}
+  .lede{font-size:clamp(18px,2.2vw,22px);color:#D6E0D8;max-width:56ch;margin:0 0 36px;line-height:1.55;
+    opacity:0;animation:rise .8s .6s ease forwards;}
+  .lede b{color:var(--paper);font-weight:500;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;opacity:0;animation:rise .8s .72s ease forwards;}
+  .btn{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.03em;text-decoration:none;
+    padding:13px 22px;border-radius:2px;display:inline-block;transition:transform .15s ease,background .15s ease,border-color .15s ease;}
+  .btn-primary{background:var(--emerald);color:#04120B;font-weight:500;}
+  .btn-primary:hover{background:#46cb9c;transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--line-dark);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--emerald);transform:translateY(-2px);}
+
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+    font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.2em;color:#7E9387;text-transform:uppercase;
+    opacity:0;animation:rise 1s 1s ease forwards;}
+  .scroll-hint span{display:block;width:1px;height:30px;background:linear-gradient(var(--emerald),transparent);margin:10px auto 0;}
+
+  @keyframes rise{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+
+  /* ---------------- sections ---------------- */
+  section{padding:84px 0;}
+  .sec-head{margin-bottom:48px;max-width:64ch;}
+  .sec-head h2{font-size:clamp(28px,4vw,42px);margin:14px 0 0;letter-spacing:-0.025em;}
+  .sec-head p{color:var(--charcoal-soft);margin:18px 0 0;font-size:18px;}
+
+  /* capabilities */
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .cap{background:var(--paper);padding:30px 26px;transition:background .25s;}
+  .cap:hover{background:#fff;}
+  .cap h3{font-size:20px;margin:0 0 6px;letter-spacing:-0.01em;}
+  .cap .role{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald-deep);}
+  .cap ul{list-style:none;padding:0;margin:16px 0 0;}
+  .cap li{font-size:15.5px;line-height:1.5;padding:7px 0 7px 20px;position:relative;color:var(--charcoal-soft);border-top:1px solid var(--line);}
+  .cap li:first-child{border-top:none;}
+  .cap li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:1px;background:var(--brass);}
+  @media(max-width:820px){.caps{grid-template-columns:1fr;}}
+
+  /* metrics strip */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);border-block:1px solid var(--line-dark);margin-top:64px;}
+  .strip .m{background:var(--ink);color:var(--paper);padding:30px 24px;text-align:center;}
+  .strip .m .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(30px,4vw,44px);color:var(--paper);line-height:1;}
+  .strip .m .big em{color:var(--emerald);font-style:normal;}
+  .strip .m .lbl{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#9FB3A6;margin-top:12px;}
+  @media(max-width:680px){.strip{grid-template-columns:repeat(2,1fr);}}
+
+  /* work */
+  .work-sec{background:var(--ink);color:var(--paper);}
+  .work-sec .sec-head h2{color:var(--paper);}
+  .work-sec .sec-head p{color:#9FB3A6;}
+  .work-sec .eyebrow{color:var(--brass);}
+  .cases{display:flex;flex-direction:column;}
+  .case{border-top:1px solid var(--line-dark);padding:36px 0;
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:32px;
+    transition:padding-left .25s ease;position:relative;}
+  .case:hover{padding-left:12px;}
+  .case::before{content:"";position:absolute;left:-2px;top:36px;bottom:36px;width:2px;background:var(--emerald);
+    transform:scaleY(0);transform-origin:top;transition:transform .3s ease;}
+  .case:hover::before{transform:scaleY(1);}
+  .case:last-child{border-bottom:1px solid var(--line-dark);}
+  .case .tag{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald);}
+  .case .meta h3{font-size:26px;margin:10px 0 6px;color:var(--paper);letter-spacing:-0.02em;}
+  .case .meta .role{font-size:15px;color:#9FB3A6;font-style:italic;}
+  .case .visit{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:"IBM Plex Mono";
+    font-size:12.5px;letter-spacing:.03em;color:var(--brass);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s,gap .2s;}
+  .case .visit:hover{border-color:var(--brass);gap:11px;}
+  .case .body p{margin:0 0 16px;font-size:16.5px;color:#CBD6CD;line-height:1.55;}
+  .case .body p:last-child{margin-bottom:0;}
+  .case .stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;}
+  .case .stat{border-left:2px solid var(--brass);padding-left:12px;}
+  .case .stat .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:24px;color:var(--paper);line-height:1;}
+  .case .stat .lbl{font-family:"IBM Plex Mono";font-size:11px;color:#9FB3A6;letter-spacing:.05em;margin-top:6px;text-transform:uppercase;}
+  .case .stack{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .case .stack span{font-family:"IBM Plex Mono";font-size:11.5px;color:#A9B8AD;border:1px solid var(--line-dark);border-radius:2px;padding:4px 9px;}
+  @media(max-width:760px){.case{grid-template-columns:1fr;gap:16px;}.case:hover{padding-left:0;}.case::before{display:none;}}
+
+  /* background */
+  .bg-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start;}
+  .bg-grid .intro p{font-size:18px;color:var(--charcoal-soft);margin:0 0 18px;}
+  .timeline{list-style:none;margin:0;padding:0;}
+  .timeline li{padding:16px 0 16px 26px;border-top:1px solid var(--line);position:relative;}
+  .timeline li:first-child{border-top:none;}
+  .timeline li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:9px;border-radius:50%;border:2px solid var(--emerald);background:var(--paper);}
+  .timeline .yr{font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.05em;color:var(--emerald-deep);}
+  .timeline .what{font-family:"Bricolage Grotesque";font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:3px 0 2px;}
+  .timeline .where{font-size:15px;color:var(--charcoal-soft);}
+  @media(max-width:760px){.bg-grid{grid-template-columns:1fr;gap:34px;}}
+
+  /* contact */
+  .contact{background:var(--ink-2);color:var(--paper);text-align:center;padding:100px 0;position:relative;overflow:hidden;}
+  .contact .glow{position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 0%, rgba(52,180,136,.16), transparent 60%);pointer-events:none;}
+  .contact .eyebrow{color:var(--brass);justify-content:center;position:relative;}
+  .contact h2{font-size:clamp(32px,5.5vw,60px);margin:14px 0 20px;color:var(--paper);position:relative;}
+  .contact h2 .em{color:var(--emerald);}
+  .contact p{color:#9FB3A6;max-width:48ch;margin:0 auto 36px;font-size:18px;position:relative;}
+  .contact .cta-row{justify-content:center;position:relative;animation:none;opacity:1;}
+
+  footer{background:var(--ink);color:#6F8276;text-align:center;padding:28px 0;font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.04em;border-top:1px solid var(--line-dark);}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+    .loc,.hero h1.hname,.htag,.lede,.cta-row,.proof,.scroll-hint{animation:none!important;opacity:1!important;transform:none!important;}
+    .btn:hover,.case:hover{transform:none;}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--emerald);outline-offset:3px;}
+  .skip{position:absolute;left:-999px;top:0;z-index:100;background:var(--emerald);color:#04120B;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;padding:10px 16px;text-decoration:none;border-radius:2px;}
+  .skip:focus{left:12px;top:12px;}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="mark">DENNIS ROSALES<span>.</span></div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#what">What I do</a>
+        <a href="#work">Selected work</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-resume" href="Dennis-Rosales-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO with live 3D -->
+<header class="hero" id="top">
+  <canvas id="gl"></canvas>
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="loc mono"><span class="b">Portfolio</span><i>|</i><span class="b">Toronto, ON</span><i>|</i><span class="b">Open to roles</span>&nbsp;&amp; remote</div>
+      <h1 class="hname">Dennis Rosales</h1>
+      <p class="htag">Growth marketing <span class="hl">+</span> AI content,<br>built to <span class="em">drive results</span>.</p>
+      <p class="lede">I run paid social campaigns, create AI-assisted content, and build landing pages + tracking that turn attention into measurable action.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>View case studies</a>
+        <a class="btn btn-resume" href="Dennis-Rosales-Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download résumé</a>
+        <a class="cta-link" href="https://www.linkedin.com/in/dennis-rosales-b72a26239" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="proof">
+        <div class="pstat"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><div><div class="pn">19K+</div><div class="pl">Organic views</div></div></div>
+        <div class="pstat"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><div class="pn">514</div><div class="pl">Subscribers gained</div></div></div>
+        <div class="pstat"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><div><div class="pn">5+</div><div class="pl">Brands shipped</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll<span></span></div>
+</header>
+
+<main id="main">
+
+<!-- WHAT I DO -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>One operator, the whole stack.</h2>
+      <p>Most candidates own one slice of a campaign. I take a brief from idea to live — strategy, creative, build, and the paid push behind it — so there are fewer hand-offs and a faster line from concept to results.</p>
+    </div>
+
+    <div class="caps reveal">
+      <div class="cap">
+        <span class="role">Paid &amp; growth</span>
+        <h3>Performance marketing</h3>
+        <ul>
+          <li>Meta Ads: campaign &amp; ad-set structure, CBO, Traffic / LPV</li>
+          <li>Audience targeting &amp; A/B creative testing</li>
+          <li>Meta Pixel, datasets &amp; Business Manager setup</li>
+          <li>Landing-page conversion &amp; tracking</li>
+          <li>Campaign reporting &amp; optimization</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="role">Create</span>
+        <h3>AI content production</h3>
+        <ul>
+          <li>AI video: Higgsfield, Seedance, Kling</li>
+          <li>AI music &amp; voice: Suno, ElevenLabs</li>
+          <li>Editing &amp; short-form: CapCut, vertical Shorts</li>
+          <li>Cross-platform: TikTok, YouTube, Facebook</li>
+          <li>Content calendars, UGC briefs, storyboards</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="role">Build</span>
+        <h3>Web &amp; technical</h3>
+        <ul>
+          <li>Front-end: HTML, CSS, JavaScript, Three.js</li>
+          <li>Deployment: GitHub Pages, DNS &amp; custom domains</li>
+          <li>App work: bug fixes, notifications, PWA</li>
+          <li>Security: access guards, rate limiting, RLS</li>
+          <li>Music tooling: DistroKid, synced lyrics, visualizers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="strip reveal">
+      <div class="m"><div class="big">3<em>×</em></div><div class="lbl">Disciplines in one hire</div></div>
+      <div class="m"><div class="big">10<em>+</em></div><div class="lbl">Years client-facing</div></div>
+      <div class="m"><div class="big">5<em>+</em></div><div class="lbl">Brands &amp; clients shipped</div></div>
+      <div class="m"><div class="big">19K<em>+</em></div><div class="lbl">Organic views · 21 days</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section id="work" class="work-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2>Things I actually shipped — go click them.</h2>
+      <p>Live projects with clear scope, measurable outcomes, and working links.</p>
+    </div>
+
+    <div class="cases">
+
+      <article class="case reveal">
+        <div class="meta">
+          <span class="tag">Music brand · launch</span>
+          <h3>MoodtoMusik</h3>
+          <p class="role">Founder, producer &amp; marketer</p>
+          <a class="visit" href="https://moodtomusik.com" target="_blank" rel="noopener">Visit moodtomusik.com →</a><br/>
+          <a class="visit" href="https://distrokid.com/hyperfollow/moodtomusik/kape-lang-dapat-3" target="_blank" rel="noopener">Pre-save the single →</a><br/>
+          <a class="visit" href="moodtomusik-ads.html">See the ad &amp; Pixel setup →</a>
+        </div>
+        <div class="body">
+          <p>Built the full digital launch for an original OPM single — a landing page with a live 3D coffee-cup hero and countdown, Meta Pixel tracking, a Meta Ads pre-save campaign (Philippines 18–44, CBO) with three Taglish copy variants, plus the distribution and synced-lyrics pipeline behind it.</p>
+          <div class="stats">
+            <div class="stat"><div class="big">Jul 17</div><div class="lbl">Release date 2026</div></div>
+            <div class="stat"><div class="big">3</div><div class="lbl">Ad variants staged</div></div>
+            <div class="stat"><div class="big">Live</div><div class="lbl">Pixel tracking</div></div>
+          </div>
+          <div class="stack"><span>Meta Ads</span><span>Meta Pixel</span><span>Three.js</span><span>GitHub Pages</span><span>DistroKid</span><span>Suno</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="meta">
+          <span class="tag">Faceless channel · AI</span>
+          <h3>RoundBeats PH</h3>
+          <p class="role">Managing Director &amp; operator</p>
+          <a class="visit" href="https://roundbeatsph.github.io/roundbeats-ph/" target="_blank" rel="noopener">Visit the channel →</a>
+        </div>
+        <div class="body">
+          <p>Direct and run a faceless, AI-assisted battle-rap beats channel across YouTube, TikTok and Facebook. In under three weeks from launch, the channel grew from zero to 19K+ organic views and 514 subscribers — with a single beat edit hitting 9,260 views. Also handle cross-platform distribution, including diagnosing and recovering a TikTok visibility issue.</p>
+          <div class="stats">
+            <div class="stat"><div class="big">19K+</div><div class="lbl">Views in &lt;3 weeks</div></div>
+            <div class="stat"><div class="big">+514</div><div class="lbl">Subscribers from zero</div></div>
+            <div class="stat"><div class="big">2.14%</div><div class="lbl">Click-through rate</div></div>
+          </div>
+          <div class="stack"><span>YouTube</span><span>TikTok</span><span>Facebook</span><span>AI video</span><span>Organic growth</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="meta">
+          <span class="tag">Local business · web app</span>
+          <h3>Filipino Appliance Repair</h3>
+          <p class="role">Web developer &amp; digital lead</p>
+          <a class="visit" href="https://filipinoappliancerepair.ca" target="_blank" rel="noopener">Visit the live site →</a><br/>
+          <a class="visit" href="fair.html">See what's inside →</a>
+        </div>
+        <div class="body">
+          <p>Took a family appliance-repair business online: fixed booking-calendar bugs, wired customer + technician email notifications, hardened security (access guards, rate limiting, row-level security, secrets in env vars), rewrote the PWA service worker, and restructured the services gallery.</p>
+          <div class="stats">
+            <div class="stat"><div class="big">Live</div><div class="lbl">In production</div></div>
+            <div class="stat"><div class="big">Sole</div><div class="lbl">Developer</div></div>
+          </div>
+          <div class="stack"><span>Web app</span><span>PWA</span><span>Notifications</span><span>Security hardening</span><span>DNS</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="meta">
+          <span class="tag">B2B SaaS · client</span>
+          <h3>Registruum Technologies</h3>
+          <p class="role">Marketing &amp; video production partner</p>
+          <a class="visit" href="https://registruum.ca" target="_blank" rel="noopener">Visit the client →</a>
+        </div>
+        <div class="body">
+          <p>Ran social marketing and AI video production for a Toronto B2B SaaS startup: built a Higgsfield / Synthesia production pipeline, a 30-day content calendar, a UGC brief and storyboard, and a demo site — under a formal marketing partnership agreement.</p>
+          <div class="stats">
+            <div class="stat"><div class="big">30-day</div><div class="lbl">Content calendar</div></div>
+            <div class="stat"><div class="big">6</div><div class="lbl">Videos produced</div></div>
+          </div>
+          <div class="stack"><span>Content strategy</span><span>AI video</span><span>UGC</span><span>Storyboarding</span><span>Demo build</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section id="background">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Background</span>
+      <h2>Where the range comes from.</h2>
+    </div>
+    <div class="bg-grid">
+      <div class="intro reveal">
+        <p>Before the studio work, I spent over a decade in customer service and data roles — the kind of experience that teaches you to listen to what people actually want, write clearly, and stay calm under volume.</p>
+        <p>I hold a Bachelor of Advertising &amp; Public Relations from the Polytechnic University of the Philippines. The mix is the point: I think like a marketer, write like a communicator, and build like a developer.</p>
+        <p>Today I'm in Toronto, running my own brands and client projects — ready for a role where all three skill sets pull in the same direction.</p>
+      </div>
+      <ul class="timeline reveal">
+        <li><div class="yr mono">Now · Toronto</div><div class="what">Independent creator &amp; developer</div><div class="where">Paid media, AI content &amp; web builds across multiple brands</div></li>
+        <li><div class="yr mono">Client work</div><div class="what">Marketing &amp; video production</div><div class="where">Registruum Technologies (B2B SaaS)</div></li>
+        <li><div class="yr mono">10+ years</div><div class="what">Customer service &amp; data management</div><div class="where">TELUS International, Sutherland, C3, Cyberbacker</div></li>
+        <li><div class="yr mono">Education</div><div class="what">BA, Advertising &amp; Public Relations</div><div class="where">Polytechnic University of the Philippines</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Need someone who can do <span class="em">all three?</span></h2>
+    <p>Open to growth, performance-marketing and content roles in Toronto or remote. Let's talk about what you're building.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:dentvph@gmail.com">dentvph@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/dennis-rosales-b72a26239" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>© <span id="yr"></span> Dennis Rosales · Toronto, ON · Custom-designed &amp; deployed.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // nav solidify on scroll
+  var nav=document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY>40); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // ---------------- live 3D hero ----------------
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var canvas = document.getElementById('gl');
+    if(typeof THREE === 'undefined'){ canvas.style.display='none'; return; }
+
+    var renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.set(0,0,6);
+
+    // faceted gem (low-poly icosahedron) — the "studio" centerpiece
+    var geo = new THREE.IcosahedronGeometry(1.7, 0);
+    var mat = new THREE.MeshStandardMaterial({
+      color:0x1F6F54, metalness:0.55, roughness:0.3, flatShading:true
+    });
+    var gem = new THREE.Mesh(geo, mat);
+    scene.add(gem);
+
+    // brass wireframe shell
+    var wire = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(1.95, 0),
+      new THREE.MeshBasicMaterial({color:0xD4AC5A, wireframe:true, transparent:true, opacity:0.28})
+    );
+    scene.add(wire);
+
+    // particle halo
+    var pcount = 420, pg = new THREE.BufferGeometry(), pos = new Float32Array(pcount*3);
+    for(var i=0;i<pcount;i++){
+      var r=3+Math.random()*5, a=Math.random()*Math.PI*2, b=Math.acos(2*Math.random()-1);
+      pos[i*3]=r*Math.sin(b)*Math.cos(a); pos[i*3+1]=r*Math.sin(b)*Math.sin(a); pos[i*3+2]=r*Math.cos(b);
+    }
+    pg.setAttribute('position', new THREE.BufferAttribute(pos,3));
+    var particles = new THREE.Points(pg, new THREE.PointsMaterial({color:0x34B488,size:0.035,transparent:true,opacity:0.65}));
+    scene.add(particles);
+
+    // lights
+    scene.add(new THREE.AmbientLight(0x244437, 0.9));
+    var l1=new THREE.PointLight(0x34B488,1.5,30); l1.position.set(5,4,6); scene.add(l1);
+    var l2=new THREE.PointLight(0xD4AC5A,1.1,30); l2.position.set(-6,-3,2); scene.add(l2);
+
+    var tx=0,ty=0,cx=0,cy=0;
+    window.addEventListener('pointermove',function(e){
+      tx=(e.clientX/window.innerWidth-0.5); ty=(e.clientY/window.innerHeight-0.5);
+    },{passive:true});
+
+    function resize(){
+      var w=canvas.clientWidth, h=canvas.clientHeight;
+      renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+      // push object to the right so left-side text stays clean
+      var off = w<760 ? 0 : 1.7;
+      gem.position.x=off; wire.position.x=off; particles.position.x=off*0.6;
+      if(w<760){ gem.scale.setScalar(0.8); wire.scale.setScalar(0.8); }
+    }
+    window.addEventListener('resize',resize); resize();
+
+    var paused=false;
+    document.addEventListener('visibilitychange',function(){paused=document.hidden;});
+
+    function frame(){
+      if(reduce){ renderer.render(scene,camera); return; }
+      requestAnimationFrame(frame);
+      if(paused) return;
+      cx+=(tx-cx)*0.05; cy+=(ty-cy)*0.05;
+      gem.rotation.y+=0.0045; gem.rotation.x+=0.0016;
+      wire.rotation.y-=0.0026; wire.rotation.x+=0.001;
+      particles.rotation.y+=0.0006;
+      camera.position.x = cx*1.2; camera.position.y = -cy*1.0; camera.lookAt(gem.position.x*0.5,0,0);
+      renderer.render(scene,camera);
+    }
+    frame();
+  })();
+</script>
+
+</body>
+</html>

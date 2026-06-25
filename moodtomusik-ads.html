@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MoodtoMusik — Meta Ads & Pixel Setup | Dennis Rosales</title>
+<meta name="description" content="Case study: the paid-media and tracking setup behind a music single launch — Meta Pixel, a linked landing page, audience targeting, and a campaign staged for launch." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://YOUR-DOMAIN.com/moodtomusik-ads.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#0B1711;--ink-2:#10201A;--emerald:#34B488;--emerald-deep:#1F6F54;--brass:#D4AC5A;
+    --paper:#F5F2EA;--paper-2:#EDE8DA;--charcoal:#1A1A17;--charcoal-soft:#4A4A42;--line:#D9D2C2;--line-dark:#243029;--max:920px;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--charcoal);font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  ::selection{background:var(--emerald);color:#04120B;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.04;letter-spacing:-0.02em;}
+  .mono{font-family:"IBM Plex Mono",monospace;}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);}
+
+  .topbar{background:var(--ink);border-bottom:1px solid var(--line-dark);}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .back{font-family:"IBM Plex Mono";font-size:12.5px;letter-spacing:.03em;color:#B9C6BD;text-decoration:none;display:inline-flex;gap:8px;align-items:center;transition:gap .2s,color .2s;}
+  .back:hover{color:var(--paper);gap:12px;}
+  .topbar .mark{font-family:"Bricolage Grotesque";font-weight:800;color:var(--paper);font-size:17px;}
+  .topbar .mark span{color:var(--brass);}
+
+  .hero{background:radial-gradient(110% 90% at 90% -10%, rgba(52,180,136,.14), transparent 55%),var(--ink);color:var(--paper);padding:74px 0 60px;border-bottom:1px solid var(--line-dark);}
+  .hero .eyebrow{color:var(--brass);}
+  .hero h1{font-size:clamp(34px,6vw,62px);margin:14px 0 20px;max-width:18ch;}
+  .hero p{font-size:clamp(18px,2.2vw,21px);color:#D6E0D8;max-width:62ch;margin:0 0 28px;}
+  .hero .btnrow{display:flex;flex-wrap:wrap;gap:13px;align-items:center;}
+  .btn{font-family:"IBM Plex Mono";font-size:13px;letter-spacing:.03em;text-decoration:none;padding:12px 20px;border-radius:2px;display:inline-block;transition:transform .15s,background .15s,border-color .15s;}
+  .btn-primary{background:var(--emerald);color:#04120B;font-weight:500;}
+  .btn-primary:hover{background:#46cb9c;transform:translateY(-2px);}
+  .btn-ghost{border:1px solid var(--line-dark);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--emerald);transform:translateY(-2px);}
+  .tags{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;}
+  .tags span{font-family:"IBM Plex Mono";font-size:11.5px;color:#A9B8AD;border:1px solid var(--line-dark);border-radius:2px;padding:4px 9px;}
+
+  .meta-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line);}
+  .meta-strip .c{background:var(--paper);padding:22px 24px;}
+  .meta-strip .k{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--emerald-deep);}
+  .meta-strip .v{font-family:"Bricolage Grotesque";font-weight:600;font-size:17px;margin-top:7px;letter-spacing:-0.01em;}
+  @media(max-width:680px){.meta-strip{grid-template-columns:1fr;}}
+
+  section{padding:54px 0;}
+  .lead{font-size:20px;color:var(--charcoal-soft);max-width:64ch;}
+  h2.block{font-size:clamp(24px,3.4vw,32px);margin:0 0 8px;}
+  .sub{color:var(--charcoal-soft);margin:0 0 30px;font-size:17px;max-width:60ch;}
+
+  /* numbered process steps */
+  .steps{list-style:none;counter-reset:s;padding:0;margin:0;}
+  .steps li{counter-increment:s;position:relative;padding:0 0 30px 64px;}
+  .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-2px;
+    font-family:"IBM Plex Mono";font-size:13px;color:var(--emerald-deep);
+    border:1px solid var(--line);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--paper);}
+  .steps li::after{content:"";position:absolute;left:19px;top:42px;bottom:6px;width:1px;background:var(--line);}
+  .steps li:last-child::after{display:none;}
+  .steps h3{font-size:19px;margin:0 0 6px;letter-spacing:-0.01em;}
+  .steps p{font-size:16px;color:var(--charcoal-soft);margin:0;line-height:1.55;}
+
+  .funnel{background:var(--ink);color:var(--paper);}
+  .funnel h2.block{color:var(--paper);}
+  .funnel .sub{color:#9FB3A6;}
+  .flow{list-style:none;padding:0;margin:0;}
+  .flow li{padding:16px 0 16px 30px;border-top:1px solid var(--line-dark);position:relative;color:#CBD6CD;font-size:16.5px;}
+  .flow li:first-child{border-top:none;}
+  .flow li b{color:var(--paper);font-family:"Bricolage Grotesque";font-weight:600;}
+  .flow li::before{content:"→";position:absolute;left:0;top:16px;color:var(--brass);font-family:"IBM Plex Mono";}
+
+  .note{margin-top:30px;border-left:2px solid var(--brass);padding:6px 0 6px 16px;color:#9FB3A6;font-size:15.5px;max-width:60ch;}
+
+  .nextcta{text-align:center;padding:70px 0;background:var(--ink-2);color:var(--paper);}
+  .nextcta h2{font-size:clamp(26px,4vw,40px);color:var(--paper);margin:0 0 22px;}
+  footer{background:var(--ink);color:#6F8276;text-align:center;padding:26px 0;font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.04em;border-top:1px solid var(--line-dark);}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}.btn:hover{transform:none;}}
+  a:focus-visible{outline:2px solid var(--emerald);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap row">
+    <a class="back" href="index.html">← Back to portfolio</a>
+    <div class="mark">DENNIS<span>.</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Case study · Paid media</span>
+    <h1>MoodtoMusik — Meta Ads &amp; Pixel setup</h1>
+    <p>How I set up the tracking and paid-media engine behind a music single launch: a Meta Pixel on the landing page, the page linked to the pre-save, an audience defined, and a campaign built and staged — ready to go live ahead of release day.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="https://moodtomusik.com" target="_blank" rel="noopener">See the landing page →</a>
+      <a class="btn btn-ghost" href="https://distrokid.com/hyperfollow/moodtomusik/kape-lang-dapat-3" target="_blank" rel="noopener">The pre-save link →</a>
+    </div>
+    <div class="tags">
+      <span>Meta Ads Manager</span><span>Meta Pixel</span><span>CBO</span><span>Audience targeting</span><span>A/B creative</span><span>Conversion tracking</span>
+    </div>
+  </div>
+</header>
+
+<div class="meta-strip">
+  <div class="c"><div class="k">Objective</div><div class="v">Traffic / landing-page views</div></div>
+  <div class="c"><div class="k">Audience</div><div class="v">Philippines · 18–44</div></div>
+  <div class="c"><div class="k">Status</div><div class="v">Built &amp; staged for launch</div></div>
+</div>
+
+<section>
+  <div class="wrap reveal">
+    <p class="lead">A launch is only as good as the system behind it. Before spending a peso, I set up the tracking, gave every visitor one clear action, and staged the campaign so it was ready to switch on. Here's the build, step by step.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="block reveal">How it's set up</h2>
+    <p class="sub reveal">The process I followed to make the launch measurable and ready to scale.</p>
+    <ol class="steps reveal">
+      <li>
+        <h3>Install the Meta Pixel on the landing page</h3>
+        <p>The Meta Pixel is embedded on the landing page to record page views and the on-site events I configure (such as page view and outbound pre-save clicks). That's the data that makes the ads measurable instead of guesswork.</p>
+      </li>
+      <li>
+        <h3>Link the page to the pre-save</h3>
+        <p>The landing page connects straight to the pre-save (HyperFollow) link, giving every visitor one clear action: save the single before release. One page, one job.</p>
+      </li>
+      <li>
+        <h3>Build the campaign in Meta Ads Manager</h3>
+        <p>A campaign set to a traffic / landing-page-view objective using a central budget (campaign budget optimization), which Meta distributes across the eligible ad sets rather than splitting it manually.</p>
+      </li>
+      <li>
+        <h3>Define the target audience</h3>
+        <p>Aimed at listeners in the Philippines, ages 18–44 — the core audience for OPM and the kind of short-form music content the brand makes.</p>
+      </li>
+      <li>
+        <h3>Prepare three creative variants to test</h3>
+        <p>Three Taglish ad copy variants (A / B / C) ready to run against each other, so the data — not a guess — decides which message wins.</p>
+      </li>
+      <li>
+        <h3>Stage it, paused and ready</h3>
+        <p>The whole campaign is built and held in a paused state, ready to switch on at the right moment in the run-up to release day.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="funnel">
+  <div class="wrap">
+    <h2 class="block reveal">What happens when it goes live</h2>
+    <p class="sub reveal">The point of the setup: turn ad spend into a measurable, repeatable path to release-day momentum.</p>
+    <ul class="flow reveal">
+      <li><b>Impressions</b> — the ads reach the targeted Philippine audience in their feeds.</li>
+      <li><b>Clicks</b> — interested listeners tap through to the MoodtoMusik landing page.</li>
+      <li><b>Pixel fires</b> — landing-page visits and configured on-site events are recorded, so spend can be read against real actions.</li>
+      <li><b>Pre-save click</b> — visitors head to the pre-save; completed pre-saves are read separately in HyperFollow's own reporting.</li>
+      <li><b>Audience builds</b> — the people who engaged become a warm audience I can retarget.</li>
+      <li><b>Release day</b> — that warm audience converts into first-day streams and momentum.</li>
+    </ul>
+    <p class="note">Staged ahead of the official release. Because the tracking is in place first, performance can be read and optimized in real time once it's live — not guessed at afterwards.</p>
+  </div>
+</section>
+
+<div class="nextcta">
+  <div class="wrap">
+    <h2>See the rest of the work →</h2>
+    <a class="btn btn-primary" href="index.html">Back to portfolio</a>
+  </div>
+</div>
+
+<footer>© <span id="yr"></span> Dennis Rosales · Toronto, ON</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
